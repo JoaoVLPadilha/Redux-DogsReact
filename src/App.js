@@ -1,10 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+import Home from './Components/Home';
+import Login from './Components/Login/Login';
+import { UserStorage } from './UserContext';
 function App() {
   return (
     <>
-      <h1>App React</h1>
+      <BrowserRouter>
+        <UserStorage>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login/*" element={<Login />} />
+          </Routes>
+          <Footer />
+        </UserStorage>
+      </BrowserRouter>
     </>
   );
 }
