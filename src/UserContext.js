@@ -40,7 +40,7 @@ export const UserStorage = ({ children }) => {
       setLoading(true);
       const { url, options } = TOKEN_POST({ username, password });
       const tokenRes = await fetch(url, options);
-      console.log(tokenRes);
+      console.log('TokenRes', tokenRes);
       if (!tokenRes.ok)
         throw new Error(`Erro:${tokenRes.statusText} Usuário Inválido`);
       const json = await tokenRes.json();
@@ -71,6 +71,8 @@ export const UserStorage = ({ children }) => {
         } finally {
           setLoading(false);
         }
+      } else {
+        setLogin(false);
       }
     }
     autoLogin();

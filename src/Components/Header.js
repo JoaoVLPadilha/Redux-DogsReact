@@ -7,7 +7,6 @@ const Header = () => {
   // Como fazer para usar o UserContext importado e puxar o valores passado no value?
   // Através do Hook useContext
   const context = React.useContext(UserContext);
-  console.log(context);
   return (
     <header className={styles.header}>
       <nav className={`container ${styles.nav}`}>
@@ -17,7 +16,6 @@ const Header = () => {
         {context.data ? (
           <Link className={styles.login} to="/conta">
             {context.data.nome}
-            <button onClick={context.userLogout}>Sair</button>
           </Link>
         ) : (
           <Link className={styles.login} to="/login">
