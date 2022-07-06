@@ -31,5 +31,4 @@ const useFetch = () => {
     request,
   };
 };
-
 export default useFetch;
