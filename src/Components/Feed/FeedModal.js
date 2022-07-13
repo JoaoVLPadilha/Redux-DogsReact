@@ -10,12 +10,9 @@ const FeedModal = ({ photo, setModalPhoto }) => {
   React.useEffect(() => {
     const { url, options } = PHOTO_GET(photo.id);
     request(url, options);
-    console.log(data);
   }, [photo]);
   function handleOutsideClick(event) {
     if (event.target === event.currentTarget) setModalPhoto(null);
-    console.log('Target', event.target);
-    console.log('Current', event.currentTarget);
   }
   return (
     <div className={styles.modal} onClick={handleOutsideClick}>
