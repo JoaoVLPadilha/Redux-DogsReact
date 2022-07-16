@@ -44,7 +44,6 @@ const Feed = ({ user }) => {
           />
         );
       })}
-      {/* <FeedPhotos page="2" user={user} setModalPhoto={setModalPhoto} /> */}
     </div>
   );
 };
