@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DogsReact/static/css/main.38d54c3f.css",
-    "main.js": "/DogsReact/static/js/main.b903850b.js",
+    "main.js": "/DogsReact/static/js/main.5c588696.js",
     "static/css/37.530d6935.chunk.css": "/DogsReact/static/css/37.530d6935.chunk.css",
     "static/js/37.15dd6b05.chunk.js": "/DogsReact/static/js/37.15dd6b05.chunk.js",
     "static/js/215.13c10c1f.chunk.js": "/DogsReact/static/js/215.13c10c1f.chunk.js",
@@ -18,13 +18,13 @@
     "static/media/estatisticas.svg": "/DogsReact/static/media/estatisticas.c69dd1e16d1f351b25eb7f01658f7c8e.svg",
     "static/media/adicionar.svg": "/DogsReact/static/media/adicionar.2fe277f9b2182f23c15f5afd7110067a.svg",
     "main.38d54c3f.css.map": "/DogsReact/static/css/main.38d54c3f.css.map",
-    "main.b903850b.js.map": "/DogsReact/static/js/main.b903850b.js.map",
+    "main.5c588696.js.map": "/DogsReact/static/js/main.5c588696.js.map",
     "37.530d6935.chunk.css.map": "/DogsReact/static/css/37.530d6935.chunk.css.map",
     "37.15dd6b05.chunk.js.map": "/DogsReact/static/js/37.15dd6b05.chunk.js.map",
     "215.13c10c1f.chunk.js.map": "/DogsReact/static/js/215.13c10c1f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.38d54c3f.css",
-    "static/js/main.b903850b.js"
+    "static/js/main.5c588696.js"
   ]
 }
