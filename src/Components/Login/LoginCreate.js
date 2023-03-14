@@ -3,16 +3,17 @@ import useForm from '../../Hooks/useForm';
 import Button from '../Forms/Button';
 import Input from '../Forms/Input';
 import { USER_POST } from '../../api';
-import { UserContext } from '../../UserContext';
 import useFetch from '../../Hooks/useFetch';
 import Error from '../Helper/Error';
 import Head from '../Helper/Head';
+import { useSelector, useDispatch } from 'react-redux';
 
+import { userLogin } from '../../store/user';
 const LoginCreate = () => {
+  const dispatch = useDispatch();
   const username = useForm();
   const email = useForm('email');
   const password = useForm();
-  const { userLogin } = React.useContext(UserContext);
   const { loading, error, request } = useFetch();
   async function handleSubmit(event) {
     event.preventDefault();
@@ -22,8 +23,10 @@ const LoginCreate = () => {
       password: password.value,
     });
     const { response } = await request(url, options);
-    console.log(response);
-    if (response.ok) userLogin(username.value, password.value);
+    if (response.ok)
+      dispatch(
+        userLogin({ username: username.value, password: password.value }),
+      );
   }
   return (
     <section className="animeLeft">

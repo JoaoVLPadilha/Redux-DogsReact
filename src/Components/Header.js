@@ -2,20 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Dogs } from '../Assets/dogs.svg';
 import styles from './Header.module.css';
-import { UserContext } from '../UserContext';
+import { useSelector, useDispatch } from 'react-redux';
 const Header = () => {
-  // Como fazer para usar o UserContext importado e puxar o valores passado no value?
-  // Através do Hook useContext
-  const context = React.useContext(UserContext);
+  const { data } = useSelector((state) => state.user);
   return (
     <header className={styles.header}>
       <nav className={`container ${styles.nav}`}>
         <Link className={styles.logo} to="/">
           <Dogs aria-label="Dogs - Home" />
         </Link>
-        {context.data ? (
+        {data ? (
           <Link className={styles.login} to="/conta">
-            {context.data.nome}
+            {data.nome}
           </Link>
         ) : (
           <Link className={styles.login} to="/login">

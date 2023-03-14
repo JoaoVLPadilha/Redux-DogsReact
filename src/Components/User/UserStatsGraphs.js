@@ -6,7 +6,6 @@ const UserStatsGraphs = ({ data }) => {
   const [total, setTotal] = React.useState(0);
 
   React.useEffect(() => {
-    console.log(data.length);
     if (data.length) {
       const graphData = data.map((item) => {
         return {
@@ -22,7 +21,6 @@ const UserStatsGraphs = ({ data }) => {
           .reduce((a, b) => a + b),
       );
       setGraph(graphData);
-      console.log(data);
     }
   }, [data]);
 
